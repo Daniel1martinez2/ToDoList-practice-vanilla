@@ -8,6 +8,16 @@ const renderState = [
   {id: 'active', state: false, pointer: filtersBtn[1]},
   {id: 'completed', state: false, pointer: filtersBtn[2]},
 ]; 
+const currentList = () =>{
+  if(renderState[0].state){
+    return dummyTask; 
+  }else if (renderState[1].state){
+    return dummyTask.filter(taskItem => taskItem.state === TASK_STATE.ACTIVE); 
+  }else if (renderState[2].state){
+    return dummyTask.filter(taskItem => taskItem.state === TASK_STATE.COMPLETED); 
+  }
+  return dummyTask; 
+}
 renderState.forEach(btn => {
   if(btn.state){
     btn.pointer.classList.add('actions__btn--active'); 
@@ -23,16 +33,15 @@ renderState.forEach(btn => {
   }); 
 })
 
-
-
 const selectAll = document.querySelector('.select-all');
 selectAll.addEventListener('click', ()=>{
-  if(dummyTask.every(item=> item.state === TASK_STATE.COMPLETED)){
-    dummyTask.map(taskItem => taskItem.state = TASK_STATE.ACTIVE);
+  let listDisplayed = currentList(); 
+  if(listDisplayed.every(item=> item.state === TASK_STATE.COMPLETED)){
+    listDisplayed.map(taskItem => taskItem.state = TASK_STATE.ACTIVE);
     reRender();
     return; 
   }else {
-    dummyTask.map(taskItem => taskItem.state = TASK_STATE.COMPLETED) 
+    listDisplayed.map(taskItem => taskItem.state = TASK_STATE.COMPLETED) 
   }
   reRender();
 })
@@ -83,19 +92,16 @@ let dummyTask = [
   {title: 'lorem4', state: TASK_STATE.ACTIVE, id: 4, onSetState: setState, onDelete: deleteTask, onSetText: setInnerText},
 ]; 
 const totalTask = document.querySelector('.total'); 
+
+
+
 //RENDERING_STUFF
 const reRender = () => {
-  let displayedArray = dummyTask; 
-  if(renderState[0].state){
-    displayedArray = dummyTask; 
-  }else if (renderState[1].state){
-    displayedArray = dummyTask.filter(taskItem => taskItem.state === TASK_STATE.ACTIVE); 
-  }else{
-    displayedArray = dummyTask.filter(taskItem => taskItem.state === TASK_STATE.COMPLETED); 
-  }
+  let displayedArray = currentList(); 
   tasksContainer.innerHTML=''; 
   displayedArray.forEach(item => tasksContainer.appendChild(task(item)) ); 
   console.log(displayedArray);
   totalTask.innerText = dummyTask.length;
 }
+
 reRender(); 
