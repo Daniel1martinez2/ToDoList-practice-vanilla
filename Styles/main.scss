@@ -125,6 +125,7 @@
   }
   &--completed{
     .task__title{
+      text-decoration:line-through; 
       color: rgb(145, 251, 175) !important;
     }
     .task__check{

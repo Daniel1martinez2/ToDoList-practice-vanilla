@@ -170,6 +170,7 @@
 }
 
 .task--completed .task__title {
+  text-decoration: line-through;
   color: #91fbaf !important;
 }
 
