@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e1f24;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todo {
+  padding: 2em;
+  width: 30em;
+  background-color: #2b2e3c;
+  border-radius: 8px;
+}
+
+.todo__form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo__input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.select-all {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1em;
+  pad: 0;
+  cursor: pointer;
+}
+
+.select-all svg {
+  color: white;
+  height: 100%;
+  width: auto;
+}
+
+.total {
+  color: white;
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1em;
+  border-top: 1px solid white;
+  padding-top: .5em;
+}
+
+.actions__summary {
+  color: #635cf6;
+}
+
+.actions__btn {
+  cursor: pointer;
+  background: none repeat scroll 0 0 transparent;
+  background-color: #635cf6;
+  border: medium none;
+  border-spacing: 0;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.42rem;
+  list-style: none outside none;
+  margin-left: 1em;
+  padding: 0 .5em;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+.actions__btn:hover {
+  background-color: #564fd5;
+}
+
+.actions__btn--active {
+  color: #564fd5;
+  background-color: white;
+}
+
+.actions__btn--active:hover {
+  color: #564fd5;
+  background-color: white;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1em 0;
+}
+
+.task__visible-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.task__check {
+  margin-right: 1em;
+  color: white;
+}
+
+.task__title {
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.task__delete svg {
+  color: #ff6765;
+}
+
+.task button {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.task--completed .task__title {
+  color: #91fbaf !important;
+}
+
+.task--completed .task__check {
+  color: #91fbaf !important;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

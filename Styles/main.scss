@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(30,31,36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todo{
+  padding: 2em;
+  width: 30em;
+  background-color: rgb(43, 46, 60);
+  border-radius: 8px;
+  &__form{
+    width: 100%;    
+    display: flex;
+  }
+  &__input{
+    width: 100%;    
+    border: none;
+    outline: none;
+  }
+}
+.select-all{
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+  pad: 0;
+  cursor: pointer;
+  svg{
+    color: white;
+    height: 100%;
+    width: auto;
+  }
+}
+
+
+.total{
+  color: white;
+}
+.actions{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  border-top: 1px solid white;
+  padding-top: .5em;
+  &__summary{
+    color:rgb(99,92,246);;
+  }
+  &__btn{
+    cursor: pointer;
+    background: none repeat scroll 0 0 transparent;
+    background-color: rgb(99,92,246);
+    border: medium none;
+    border-spacing: 0;
+    border-radius: 3px;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.42rem;
+    list-style: none outside none;
+    margin-left: 1em;
+    padding:  0 .5em ;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    &:hover{
+      background-color: rgb(86, 79, 213);
+    }
+    &--active{
+      color: rgb(86, 79, 213);
+      background-color:white;
+      &:hover{
+        color: rgb(86, 79, 213);
+        background-color:white;
+      }
+    }
+  }
+}
+
+.task{
+  
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+  &__visible-actions{
+    display: flex;
+  }
+  &__check{
+    margin-right: 1em;
+    color: white;
+  }
+  &__title{
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  &__delete{
+    svg{
+      color:rgb(255, 103, 101) ;
+    }
+  }
+  button{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+  }
+  &--completed{
+    .task__title{
+      color: rgb(145, 251, 175) !important;
+    }
+    .task__check{
+      color: rgb(145, 251, 175) !important;
+    }
+  }
+
+}
+.hidden{
+  display: none;
+}
