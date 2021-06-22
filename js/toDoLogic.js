@@ -23,6 +23,7 @@ renderState.forEach(btn => {
   }); 
 })
 
+
 const selectAll = document.querySelector('.select-all');
 selectAll.addEventListener('click', ()=>{
   if(dummyTask.every(item=> item.state === TASK_STATE.COMPLETED)){
