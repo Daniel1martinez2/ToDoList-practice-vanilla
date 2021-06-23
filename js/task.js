@@ -26,6 +26,6 @@ const task = (taskItem) => {
     `;
     taskElem.querySelector('.task__title').addEventListener('input', (event)=> taskItem.onSetText(taskItem.id,event.target.value)); 
     taskElem.querySelector('.task__check').addEventListener('click', ()=> taskItem.onSetState(taskItem.id)); 
-    taskElem.querySelector('.task__delete').addEventListener('click', ()=> taskItem.onDelete(taskItem.id))
+    taskElem.querySelector('.task__delete').addEventListener('click', ()=> taskItem.onDelete(taskItem.id)); 
     return taskElem; 
 }
