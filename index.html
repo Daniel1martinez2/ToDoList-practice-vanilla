@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="wrapper">
+    <h1 class="title">To-Do</h1>
     <main class="todo">
       <!-- FORM -->
       <form class="todo__form">
@@ -17,21 +18,23 @@
             <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
           </svg>
         </button>
-        <input type="text" class="todo__input" name="newTask" >
+        <input type="text" class="todo__input" placeholder="What needs to be done" name="newTask" >
       </form>
       <!-- TASK_CONTAINER -->
       <section class="task-container"></section>
       <!-- ACTIONS -->
-      <section class="actions">
+      <section class="actions hidden">
         <h3 class="actions__summary"> <strong class="total">3</strong> items left</h3>
         <div class="filters">
           <button class="actions__btn">All</button>
           <button class="actions__btn">Active</button>
           <button class="actions__btn">Completed</button>
         </div>
+        <button class="delete_completed">Delete Completed</button>
       </section>
     </main>
   </div>
+  
   <!-- SCRIPTS -->
   <script src="./js/task.js"></script>
   <script src="./js/toDoLogic.js"></script>

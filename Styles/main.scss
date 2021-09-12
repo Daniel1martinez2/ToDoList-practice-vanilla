@@ -18,7 +18,7 @@
 
 .todo{
   padding: 2em;
-  width: 30em;
+  width: 40em;
   background-color: rgb(43, 46, 60);
   border-radius: 8px;
   &__form{
@@ -90,14 +90,23 @@
     }
   }
 }
-
-.task{
+.title{
+  font-size: 5em;
+  color: white;
+  opacity: 0.3;
   
+}
+.task-container{
+  width: 100%;
+}
+.task{
   display: flex;
   justify-content: space-between;
   margin: 1em 0;
+  width: 100%;
   &__visible-actions{
     display: flex;
+    width: 100%;
   }
   &__check{
     margin-right: 1em;
@@ -108,10 +117,21 @@
     background: transparent;
     border: none;
     outline: none;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
+  &:hover{
+   .task__delete{
+    svg{
+      color:rgb(255, 103, 101) ;
+      display:block; 
+    }
+   } 
   }
   &__delete{
     svg{
-      color:rgb(255, 103, 101) ;
+      display:none; 
     }
   }
   button{
@@ -135,5 +155,24 @@
 
 }
 .hidden{
-  display: none;
+  display: none !important;
+}
+
+.delete_completed{
+  cursor: pointer;
+  background: none repeat scroll 0 0 transparent;
+  background-color: rgb(246, 92, 113);
+  border: medium none;
+  border-spacing: 0;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.42rem;
+  list-style: none outside none;
+  margin-left: 1em;
+  padding:  0 .5em ;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
 }

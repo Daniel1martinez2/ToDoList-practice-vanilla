@@ -28,7 +28,7 @@
 
 .todo {
   padding: 2em;
-  width: 30em;
+  width: 40em;
   background-color: #2b2e3c;
   border-radius: 8px;
 }
@@ -122,6 +122,16 @@
   background-color: white;
 }
 
+.title {
+  font-size: 5em;
+  color: white;
+  opacity: 0.3;
+}
+
+.task-container {
+  width: 100%;
+}
+
 .task {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,12 +140,14 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 1em 0;
+  width: 100%;
 }
 
 .task__visible-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .task__check {
@@ -148,10 +160,18 @@
   background: transparent;
   border: none;
   outline: none;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.task:hover .task__delete svg {
+  color: #ff6765;
+  display: block;
 }
 
 .task__delete svg {
-  color: #ff6765;
+  display: none;
 }
 
 .task button {
@@ -179,6 +199,25 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.delete_completed {
+  cursor: pointer;
+  background: none repeat scroll 0 0 transparent;
+  background-color: #f65c71;
+  border: medium none;
+  border-spacing: 0;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.42rem;
+  list-style: none outside none;
+  margin-left: 1em;
+  padding: 0 .5em;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
 }
 /*# sourceMappingURL=main.css.map */
